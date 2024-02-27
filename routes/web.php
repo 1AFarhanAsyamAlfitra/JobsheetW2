@@ -86,11 +86,22 @@ Route::resource('photos', PhotoController::class)->except([
 ]);
 
 
+// VIEW
+// Route::get('/greeting', function () {
+//     return view('hello', ['name' => 'Farhan Asyam Alfitra']);
+//     });
 
 
+// View dalam Direktori
+Route::get('/greeting', function () {
+    return view('blog.hello', ['name' => 'Farhan Asyam A.']);
+    });
+    
+// Menampilkan View dari Controller
+Route::get('/greeting', [WelcomeController::class, 
+'greeting']);
 
-
-
+// Meneruskan data ke View
 
 
 
