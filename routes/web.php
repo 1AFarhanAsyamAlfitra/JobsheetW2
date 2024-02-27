@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,9 +59,14 @@ Route::get('/user/{name?}', function ($name='john') {
     return 'Nama saya '.$name;
 });
 
+// Langkah - Langkah Praktikum Membuat Controller
 
+Route::get('/hello', [WelcomeController::class,'hello']);
 
-
+// Langkah F
+Route::get('/', [WelcomeController::class,'index']);
+Route::get('/about', [WelcomeController::class,'about']);
+Route::get('/articles/{id}', [WelcomeController::class,'articles']);
 
 
 
