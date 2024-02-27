@@ -101,7 +101,8 @@ Route::get('/greeting', function () {
 Route::get('/greeting', [WelcomeController::class, 
 'greeting']);
 
-// Meneruskan data ke View
+// Soal Praktikum
+
 
 
 
